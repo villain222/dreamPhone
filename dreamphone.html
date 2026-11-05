@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dream Phone Checklist</title>
+    <style>
+        * { box-sizing: border-box; }
+        html, body { margin: 0; padding: 0; font-family: Arial, Helvetica, sans-serif; background: #f5f3ee; color: #1a1a1a; }
+        .page { max-width: 760px; margin: 0 auto; padding: 8px; display: flex; flex-direction: column; gap: 4px; min-height: 100vh;}
+        header { text-align:center; font-weight:bold; letter-spacing:2px; border-bottom:3px double #5b3a7c; padding:6px 0 8px; color:#5b3a7c;}
+        h2 { margin:4px 0 2px; font-size:1.0rem; text-transform:uppercase; letter-spacing:1px; border-bottom:1px solid #5b3a7c; padding-bottom:2px; }
+        .grid { display:flex; flex-wrap:wrap; gap:6px 14px; align-items:flex-start;}
+        .col { min-width:0; }
+        ul.checks { list-style:none; margin:2px 0; padding-left:2px; font-size:.95rem; line-height:1.7;}
+        li label { display:inline-flex; gap:4px; align-items:center; cursor:pointer; white-space:nowrap;}
+        input[type=checkbox]{ accent-color:#5b3a7c; width:16px; height:16px; margin:0; }
+
+        .row { background:white; border-radius:8px; padding:4px 6px; box-shadow:0 1px 2px rgba(0,0,0,.05); overflow:auto;}
+        .two-col{ display:flex; flex-wrap:wrap; gap:8px;}
+        .section { background:white; border-radius:8px; padding:4px 6px; box-shadow:0 1px 2px rgba(0,0,0,.05);}
+
+        table.admirer { width:100%; border-collapse:collapse; margin-top:2px;}
+        .admirer th{ font-size:.78rem; text-transform:uppercase; letter-spacing:1px; padding:4px 6px; background:#ece3f5; color:#3b2a55; }
+        table.admirer td{ vertical-align:top; border-left:1px solid #e0d9ea;}
+        .admirer ul.checks li label { font-size:.85rem; line-height:1.6;}
+
+        .btn-clear{ margin-top:4px; padding:8px 12px; background:#5b3a7c; color:white; border:none; border-radius:6px; cursor:pointer; width:100%; font-weight:bold; letter-spacing:.5px; }
+        .btn-clear:hover { background:#4a2f66; }
+
+        @media (max-width: 520px){ ul.checks{font-size:.9rem} .admirer td{padding-left:3px;} h2{font-size:.85rem}}
+    </style>
+</head>
+<body>
+<div class="page">
+    <header>DREAM PHONE CHECKLIST</header>
+
+    <!-- CALLED BOYS / CLUES -->
+    <div class="section">
+        <h2>Called Boys &nbsp;|&nbsp; Clues (Cross off when ruled out)</h2>
+        <div style="display:flex;flex-wrap:wrap;gap:10px;">
+            <!-- Left column: Called boys split in two sub-columns -->
+            <ul class="checks" id="grp-called">
+                <li><label><input type="checkbox" name="called-boys" value="Alan" /> Alan</label></li>
+                <li><label><input type="checkbox" name="called-boys" value="Bob" /> Bob</label></li>
+                <li><label><input type="checkbox" name="called-boys" value="Bruce" /> Bruce</label></li>
+                <li><label><input type="checkbox" name="called-boys" value="Carlos" /> Carlos</label></li>
+                <li><label><input type="checkbox" name="called-boys" value="Dale" /> Dale</label></li>
+                <li><label><input type="checkbox" name="called-boys" value="Dan" /> Dan</label></li>
+                <li><label><input type="checkbox" name="called-boys" value="Dave" /> Dave</label></li>
+                <li><label><input type="checkbox" name="called-boys" value="Gary" /> Gary</label></li>
+                <li><label><input type="checkbox" name="called-boys" value="George" /> George</label></li>
+                <li><label><input type="checkbox" name="called-boys" value="James" /> James</label></li>
+                <li><label><input type="checkbox" name="called-boys" value="Jamal" /> Jamal</label></li>
+                <li><label><input type="checkbox" name="called-boys" value="Jason" /> Jason</label></li>
+            </ul>
+
+            <!-- Right sub-column of called boys -->
+            <ul class="checks">
+                <li><label><input type="checkbox" name="called-boys" value="John" /> John</label></li>
+                <li><label><input type="checkbox" name="called-boys" value="Mark" /> Mark</label></li>
+                <li><label><input type="checkbox" name="called-boys" value="Matt" /> Matt</label></li>
+                <li><label><input type="checkbox" name="called-boys" value="Mike" /> Mike</label></li>
+                <li><label><input type="checkbox" name="called-boys" value="Paul" /> Paul</label></li>
+                <li><label><input type="checkbox" name="called-boys" value="Phil" /> Phil</label></li>
+                <li><label><input type="checkbox" name="called-boys" value="Ron" /> Ron</label></li>
+                <li><label><input type="checkbox" name="called-boys" value="Scott" /> Scott</label></li>
+                <li><label><input type="checkbox" name="called-boys" value="Spencer" /> Spencer</label></li>
+                <li><label><input type="checkbox" name="called-boys" value="Steve" /> Steve</label></li>
+                <li><label><input type="checkbox" name="called-boys" value="Tony" /> Tony</label></li>
+                <li><label><input type="checkbox" name="called-boys" value="Tyler" /> Tyler</label></li>
+                <li><label><input type="checkbox" name="called-boys" value="Wayne" /> Wayne</label></li>
+            </ul>
+
+        </div>
+
+        <!-- Clues -->
+        <div class="two-col">
+            <!-- Hangouts -->
+            <div style="flex:1 1 200px;">
+                <h3 style="margin:6px 0 4px;font-size:.9rem;text-transform:uppercase;letter-spacing:1px;color:#5b3a7c;border-bottom:1px solid #e0d9ea;padding-bottom:2px;">Hangouts</h3>
+                <div class="two-col">
+                    <ul class="checks">
+                        <li><label><input type="checkbox" name="hangouts" value="Crosstown Mall" /> Crosstown Mall</label></li>
+                        <li><label><input type="checkbox" name="hangouts" value="Reel Movies" /> Reel Movies</label></li>
+                        <li><label><input type="checkbox" name="hangouts" value="High Tide Beach" /> High Tide Beach</label></li>
+                    </ul>
+                    <ul class="checks">
+                        <li><label><input type="checkbox" name="hangouts" value="E.A.T.S. Snack Shop" /> E.A.T.S. Snack Shop</label></li>
+                        <li><label><input type="checkbox" name="hangouts" value="Woodland Park" /> Woodland Park</label></li>
+                        <li><label><input type="checkbox" name="hangouts" value="Jim's Gym" /> Jim's Gym</label></li>
+                    </ul>
+                </div>
+
+                <!-- Sports -->
+                <h3 style="margin:8px 0 4px;font-size:.9rem;text-transform:uppercase;letter-spacing:1px;color:#5b3a7c;border-bottom:1px solid #e0d9ea;padding-bottom:2px;">Sports</h3>
+                <div class="two-col">
+                    <ul class="checks">
+                        <li><label><input type="checkbox" name="sports" value="Baseball" /> Baseball</label></li>
+                        <li><label><input type="checkbox" name="sports" value="Skateboarding" /> Skateboarding</label></li>
+                    </ul>
+                    <ul class="checks">
+                        <li><label><input type="checkbox" name="sports" value="Surfing" /> Surfing</label></li>
+                        <li><label><input type="checkbox" name="sports" value="Basketball" /> Basketball</label></li>
+                    </ul>
+                </div>
+
+            </div>
+            
+            <!-- Right column: Food and Clothing -->
+            <div style="flex:1 1 200px;">
+                <!-- Food -->
+                <h3 style="margin:6px 0 4px;font-size:.9rem;text-transform:uppercase;letter-spacing:1px;color:#5b3a7c;border-bottom:1px solid #e0d9ea;padding-bottom:2px;">Food</h3>
+                <div class="two-col">
+                    <ul class="checks">
+                        <li><label><input type="checkbox" name="food" value="Ice Cream" /> Ice Cream</label></li>
+                        <li><label><input type="checkbox" name="food" value="Cookies" /> Cookies</label></li>
+                        <li><label><input type="checkbox" name="food" value="Hot Dogs" /> Hot Dogs</label></li>
+                    </ul>
+                    <ul class="checks">
+                        <li><label><input type="checkbox" name="food" value="Pizza" /> Pizza</label></li>
+                        <li><label><input type="checkbox" name="food" value="Popcorn" /> Popcorn</label></li>
+                        <li><label><input type="checkbox" name="food" value="Candy" /> Candy</label></li>
+                    </ul>
+				</div>
+                <!-- Clothing -->
+                <h3 style="margin:8px 0 4px;font-size:.9rem;text-transform:uppercase;letter-spacing:1px;color:#5b3a7c;border-bottom:1px solid #e0d9ea;padding-bottom:2px;">Clothing</h3>
+                <div class="two-col">
+                    <ul class="checks">
+                        <li><label><input type="checkbox" name="clothing" value="Hat" /> Hat</label></li>
+                        <li><label><input type="checkbox" name="clothing" value="Tie" /> Tie</label></li>
+                    </ul>
+                    <ul class="checks">
+                        <li><label><input type="checkbox" name="clothing" value="Jacket" /> Jacket</label></li>
+                        <li><label><input type="checkbox" name="clothing" value="Glasses" /> Glasses</label></li>
+                    </ul>
+                </div>
+
+            
+        </div>
+    </div>
+
+    <!-- SECRET ADMIRER TRACKER -->
+    <div class="section">
+        <h2>Secret Admirer Tracker</h2>
+        
+        <table class="admirer" style="margin-bottom:8px;">
+            <tr><th>Crosstown Mall</th><th>E.A.T.S. Snack Shop</th><th>Reel Movies</th></tr>
+            <td>
+                <ul class="checks">
+                    <li><label><input type="checkbox" name="adm-cmall" value="Dave" /> Dave</label></li>
+                    <li><label><input type="checkbox" name="adm-cmall" value="George" /> George</label></li>
+                    <li><label><input type="checkbox" name="adm-cmall" value="Dale" /> Dale</label></li>
+                    <li><label><input type="checkbox" name="adm-cmall" value="Alan" /> Alan</label></li>
+                </ul>
+            </td>
+            <td>
+                <ul class="checks">
+                    <li><label><input type="checkbox" name="adm-eats" value="James" /> James</label></li>
+                    <li><label><input type="checkbox" name="adm-eats" value="Phil" /> Phil</label></li>
+                    <li><label><input type="checkbox" name="adm-eats" value="Bruce" /> Bruce</label></li>
+                    <li><label><input type="checkbox" name="adm-eats" value="Tyler" /> Tyler</label></li>
+                </ul>
+            </td>
+            <td>
+                <ul class="checks">
+                    <li><label><input type="checkbox" name="adm-reel" value="Jamal" /> Jamal</label></li>
+                    <li><label><input type="checkbox" name="adm-reel" value="Gary" /> Gary</label></li>
+                    <li><label><input type="checkbox" name="adm-reel" value="Dan" /> Dan</label></li>
+                    <li><label><input type="checkbox" name="adm-reel" value="Spencer" /> Spencer</label></li>
+                </ul>
+            </td>
+        </table>
+
+        <table class="admirer">
+            <tr><th>Woodland Park</th><th>High Tide Beach</th><th>Jim's Gym</th></tr>
+            <td>
+                <ul class="checks">
+                    <li><label><input type="checkbox" name="adm-wood" value="Mark" /> Mark</label></li>
+                    <li><label><input type="checkbox" name="adm-wood" value="Jason" /> Jason</label></li>
+                    <li><label><input type="checkbox" name="adm-wood" value="Steve" /> Steve</label></li>
+                    <li><label><input type="checkbox" name="adm-wood" value="John" /> John</label></li>
+                </ul>
+            </td>
+            <td>
+                <ul class="checks">
+                    <li><label><input type="checkbox" name="adm-hightide" value="Paul" /> Paul</label></li>
+                    <li><label><input type="checkbox" name="adm-hightide" value="Tony" /> Tony</label></li>
+                    <li><label><input type="checkbox" name="adm-hightide" value="Wayne" /> Wayne</label></li>
+                    <li><label><input type="checkbox" name="adm-hightide" value="Mike" /> Mike</label></li>
+                </ul>
+            </td>
+            <td>
+                <ul class="checks">
+                    <li><label><input type="checkbox" name="adm-jimsgym" value="Scott" /> Scott</label></li>
+                    <li><label><input type="checkbox" name="adm-jimsgym" value="Bob" /> Bob</label></li>
+                    <li><label><input type="checkbox" name="adm-jimsgym" value="Carlos" /> Carlos</label></li>
+                    <li><label><input type="checkbox" name="adm-jimsgym" value="Matt" /> Matt</label></li>
+                </ul>
+            </td>
+        </table>
+
+    </div>
+
+    <!-- CLEAR BUTTON -->
+    <button class="btn-clear" id="clearBtn">Clear All Checks</button>
+</div>
+
+<script>
+(function(){
+    // Collect all checkboxes and save state in localStorage keyed by name+value.
+    const STORAGE_KEY = "dreamphone_checklist_v1";
+    let savedState;
+    
+    function loadState(){
+        try {
+            const raw = localStorage.getItem(STORAGE_KEY);
+            if (raw) return JSON.parse(raw);
+        } catch(e){}
+        return {};
+    }
+
+    function saveState(stateObj){
+        try{ localStorage.setItem(STORAGE_KEY, JSON.stringify(stateObj)); }catch(e){}
+    }
+
+    const boxes = Array.from(document.querySelectorAll('input[type=checkbox]'));
+    
+    // Load saved state on start.
+    loaded = loadState();
+    for (const b of boxes) {
+        const key = b.name + "|" + b.value;
+        if (loaded[key]) b.checked = true;
+    }
+
+    function currentMap(){
+        const m = {};
+        for(const b of boxes){
+            m[b.name + "|" + b.value] = b.checked ? 1 : 0;
+        }
+        return m;
+    }
+
+    // Save on change.
+    document.addEventListener('change', (e)=>{
+        if(e.target && e.target.type === 'checkbox'){
+            saveState(currentMap());
+        }
+    });
+
+    // Clear button with confirmation.
+    const clearBtn = document.getElementById('clearBtn');
+    clearBtn.addEventListener('click', ()=>{
+        if(confirm("Are you sure? This will clear all checked items.")){
+            for(const b of boxes) b.checked = false;
+            saveState({});
+            localStorage.removeItem(STORAGE_KEY);
+        }
+    });
+
+})();
+</script>
+</body>
+</html>
